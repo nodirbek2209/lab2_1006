@@ -1,28 +1,39 @@
-
 #include <iostream>
-using namespace std;
-int main() {
-    
-    int n;
-    cin>>n;
-    for(int i=n;i>0;i--){
-        for(int j=0;j<i;j++){
-            cout<<"*";
-        }
-        cout<<"\n";
-        
-    }
-    for(int i=n;i>0;i--){
-        for(int i=n;i>0;i--){
-            cout<<"*";
-        }
-        cout<<"\n";
-    }
-    cout<<25;
-    // function for time complexity f(t)=n*(n+1)+n+n^2+n+1=2n^2+3n+1
-    // O(x^2)
-    
-    
 
+void N_printTriangle(int N_n) {
+    for (int N_i = N_n; N_i > 0; --N_i) {
+        for (int N_j = 0; N_j < N_i; ++N_j) {
+            std::cout << "*";
+        }
+        std::cout << std::endl;
+    }
+}
+
+void N_printSquare(int N_n) {
+    for (int N_i = 0; N_i < N_n; ++N_i) {
+        for (int N_j = 0; N_j < N_n; ++N_j) {
+            std::cout << "*";
+        }
+        std::cout << std::endl;
+    }
+}
+
+int main() {
+    int N_n;
+    std::cin >> N_n;
+
+    // Print triangle pattern
+    N_printTriangle(N_n);
+
+    std::cout << std::endl;
+
+    // Print square pattern
+    N_printSquare(N_n);
+
+    std::cout << std::endl;
+
+    // Print square value of n
+    std::cout << N_n * N_n << std::endl;
+    //O(n^2)
     return 0;
 }
